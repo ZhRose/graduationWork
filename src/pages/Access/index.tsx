@@ -1,6 +1,7 @@
 import { PageContainer } from '@ant-design/pro-components';
 import { Access, useAccess } from '@umijs/max';
-import { Button, Watermark } from 'antd';
+import { Button, Card, Input, Watermark } from 'antd';
+import styles from './index.less';
 const AccessPage: React.FC = () => {
   const access = useAccess();
   return (
@@ -12,7 +13,18 @@ const AccessPage: React.FC = () => {
         }}
       >
         <Access accessible={access.canSeeAdmin}>
-          <Button>只有 Admin 可以看到这个按钮</Button>
+          <Card className={styles.card}>
+            申诉班级 <Input className={styles.input}></Input>
+            申诉姓名 <Input className={styles.input}></Input>
+            申诉院系 <Input className={styles.input}></Input>
+            <div className={styles.title}>
+              申诉理由
+              <Input.TextArea className={styles.textarea}></Input.TextArea>
+            </div>
+            <div className={styles.btn}>
+              <Button type="primary">提交</Button>
+            </div>
+          </Card>
         </Access>
       </PageContainer>
     </Watermark>

@@ -46,7 +46,7 @@ export const routes = () => [
     component: './Access',
   },
   {
-    name: ' CRUD 示例',
+    name: '学生信息管理',
     path: '/table',
     component: './Table',
   },

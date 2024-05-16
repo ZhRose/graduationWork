@@ -28,7 +28,7 @@ export default defineConfig({
       wrappers: ['@/wrappers/auth'],
     },
     {
-      name: ' CRUD 示例',
+      name: '学生信息管理',
       path: '/table',
       wrappers: ['@/wrappers/auth'],
       component: './Table',
@@ -42,6 +42,16 @@ export default defineConfig({
       name: ' 数据',
       path: '/data',
       component: './Data',
+    },
+    {
+      name: '文档',
+      path: '/Word',
+      component: './Word',
+    },
+    {
+      name: '校友圈',
+      path: '/Liao',
+      component: './Liao',
     },
   ],
   npmClient: 'npm',

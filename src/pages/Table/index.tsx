@@ -92,7 +92,7 @@ const TableList: React.FC<unknown> = () => {
   const [selectedRowsState, setSelectedRows] = useState<API.UserInfo[]>([]);
   const columns: ProDescriptionsItemProps<API.UserInfo>[] = [
     {
-      title: '名称',
+      title: '姓名',
       dataIndex: 'name',
       tip: '名称是唯一的 key',
       formItemProps: {
@@ -105,7 +105,7 @@ const TableList: React.FC<unknown> = () => {
       },
     },
     {
-      title: '昵称',
+      title: '学号',
       dataIndex: 'nickName',
       valueType: 'text',
     },
@@ -130,10 +130,10 @@ const TableList: React.FC<unknown> = () => {
               setStepFormValues(record);
             }}
           >
-            配置
+            权限配置
           </a>
           <Divider type="vertical" />
-          <a href="">订阅警报</a>
+          <a href="">删除</a>
         </>
       ),
     },
@@ -143,7 +143,7 @@ const TableList: React.FC<unknown> = () => {
     <Watermark content="张航">
       <PageContainer
         header={{
-          title: 'CRUD 示例',
+          title: '学生信息管理',
         }}
       >
         <ProTable<API.UserInfo>
