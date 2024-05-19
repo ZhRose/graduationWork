@@ -1,7 +1,4 @@
 export default function Liao() {
-  return (
-    <div>
-      <h1>Liao</h1>
-    </div>
-  );
+  window.location.href = 'http://localhost:3000/';
+  return <div></div>;
 }
